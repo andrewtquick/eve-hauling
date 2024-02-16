@@ -1,38 +1,130 @@
-.App {
+* {
+  border: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+}
+
+a {
+  color: red;
+}
+
+hr {
+  color: white;
+  margin: 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.calculator-main {
+  margin-top: 30px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hauling-intro {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 60px;
+}
+
+.instructions-text {
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: underline;
+  text-decoration-color: red;
+  margin-bottom: 30px;
+}
+
+.instructions-steps {
+  font-size: 20px;
+}
+
+.figure-imgs {
+  display: flex;
+}
+
+.figure-1,
+.figure-2 {
   text-align: center;
+  margin: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.red-text {
+  color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.invalid-appraisal {
+  font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calculate-btn {
+  height: 38px;
+  width: 90.1719px;
+}
+
+.appraisal-input {
+  font-size: 20px;
+}
+
+.contract-input {
+  width: 200px;
+}
+
+.contract-details {
   display: flex;
   flex-direction: column;
+  color: white;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.janice-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.collateral-details,
+.reward-details {
+  margin-bottom: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contract-table {
+  width: 600px;
+  text-align: center;
+}
+
+sub {
+  vertical-align: top;
+}
+
+td {
+  height: 40px;
+  vertical-align: middle;
+}
+
+th {
+  border-right: 3px solid grey;
+  width: 150px;
+}
+
+.contract-steps {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  justify-content: center;
+  align-items: left;
 }
