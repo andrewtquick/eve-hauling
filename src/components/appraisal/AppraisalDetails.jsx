@@ -1,9 +1,12 @@
+import { useEffect, useRef } from "react";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import { Tooltip } from "react-tooltip";
 import Alert from "react-bootstrap/Alert";
 
 function AppraisalDetails({ volume, buy, sell, split, rawVolume }) {
+  const jitaBuy = useRef(null);
+
   const handleVolumeClick = () => {
     navigator.clipboard.writeText(volume.replace("$", ""));
   };
@@ -16,6 +19,14 @@ function AppraisalDetails({ volume, buy, sell, split, rawVolume }) {
   const handleBuyClick = () => {
     navigator.clipboard.writeText(buy.replace("$", ""));
   };
+
+  const scrollToBottom = () => {
+    jitaBuy.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [volume]);
 
   return (
     <div className="table-div">
@@ -99,7 +110,7 @@ function AppraisalDetails({ volume, buy, sell, split, rawVolume }) {
               <Tooltip id="buy" content="Copied!" openOnClick />
             </td>
           </tr>
-          <tr>
+          <tr ref={jitaBuy}>
             <th className="bg-danger text-white">Current Reward</th>
             <td>
               {" "}
