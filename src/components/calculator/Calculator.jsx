@@ -74,7 +74,7 @@ const Calculator = () => {
     setJitaSell(
       convertedPrice.format(appraisal.data.effectivePrices.totalSellPrice)
     );
-    setVolume(convertedPrice.format(appraisal.data.totalVolume));
+    setVolume(convertedPrice.format(appraisal.data.totalPackagedVolume));
     setReward(convertedPrice.format(reward));
     setCollateral(
       convertedPrice.format(appraisal.data.effectivePrices.totalBuyPrice)
