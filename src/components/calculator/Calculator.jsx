@@ -69,7 +69,7 @@ const Calculator = () => {
     });
 
     let reward =
-      process.env.REACT_APP_REWARD_PRICE * appraisal.data.totalVolume;
+      process.env.REACT_APP_REWARD_PRICE * appraisal.data.totalPackagedVolume;
 
     setJitaSell(
       convertedPrice.format(appraisal.data.effectivePrices.totalSellPrice)
@@ -88,7 +88,7 @@ const Calculator = () => {
     setJitaSplit(
       convertedPrice.format(appraisal.data.effectivePrices.totalSplitPrice)
     );
-    setRawVolume(appraisal.data.totalVolume);
+    setRawVolume(appraisal.data.totalPackagedVolume);
   };
 
   return (
